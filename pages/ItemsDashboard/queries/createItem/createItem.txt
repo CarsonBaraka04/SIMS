@@ -1,0 +1,8 @@
+INSERT INTO items (name, description, barcode, quantity, low_threshold)
+VALUES (
+  '{{ ItemNameInput.text.trim() }}',
+  '{{ ItemDescInput.text.trim() }}',
+  '{{ ItemBarcodeInput.text.trim() === "" ? "SIMS-" + Math.floor(Math.random() * 1000000) : ItemBarcodeInput.text.trim() }}',
+  {{ parseInt(ItemQtyInput.text || '0', 10) }},
+  {{ parseInt(ItemThresholdInput.text || '0', 10) }}
+);

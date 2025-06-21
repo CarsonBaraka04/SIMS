@@ -1,0 +1,1 @@
+SELECT * FROM public."allowed_roles" LIMIT 10;

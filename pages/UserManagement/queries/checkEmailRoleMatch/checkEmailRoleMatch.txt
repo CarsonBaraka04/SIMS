@@ -1,0 +1,4 @@
+SELECT COUNT(*)
+FROM users
+WHERE email = '{{ AddEmailInput.text.trim() }}'
+  AND role_id = {{ AddRoleDropdown.selectedOptionValue }};

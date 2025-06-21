@@ -1,0 +1,4 @@
+SELECT id, name, description, barcode, quantity, low_threshold
+FROM items
+WHERE quantity <= low_threshold
+ORDER BY quantity ASC;

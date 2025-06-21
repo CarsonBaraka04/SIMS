@@ -1,0 +1,9 @@
+-- PARAMETERIZED QUERY
+INSERT INTO transactions (item_id, user_id, type, qty)
+VALUES (
+  {{ parseInt(TransactionItem.selectedOptionValue) }},
+  {{ parseInt(appsmith.store.currentUser.id) }},
+  '{{ TransactionType.selectedOptionValue }}',
+  {{ parseInt(TransactionQty.text) }}
+)
+RETURNING *;

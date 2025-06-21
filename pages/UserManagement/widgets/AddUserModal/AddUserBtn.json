@@ -1,0 +1,55 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 41,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "sxrhirdffl",
+  "leftColumn": 4,
+  "minWidth": 120,
+  "mobileBottomRow": 40,
+  "mobileLeftColumn": 4,
+  "mobileRightColumn": 20,
+  "mobileTopRow": 36,
+  "needsErrorInfo": false,
+  "onClick": "{{ \n(() => {\n  const role = AddRoleDropdown.selectedOptionLabel;\n  const email = AddEmailInput.text.trim().toLowerCase();\n\n  const patternMatch = \n    (role === \"Store Clerk\" && email.endsWith(\"-clerk001@school.com\")) ||\n    (role === \"Administrator\" && email.endsWith(\"-admin001@school.com\")) ||\n    (role === \"Inventory Manager\" && email.endsWith(\"-manager001@school.com\")) ||\n    (role === \"Finance Officer\" && email.endsWith(\"-finance001@school.com\"));\n\n  if (!AddNameInput.text || !email || !AddPasswordInput.text || !AddRoleDropdown.selectedOptionValue) {\n    showAlert(\"Please fill in all fields.\", \"warning\");\n  } else if (!patternMatch) {\n    showAlert(\"Email format does not match selected role\", \"warning\");\n  } else {\n    checkEmailExists.run(() => {\n      const exists = checkEmailExists.data[0]?.count > 0;\n\n      if (exists) {\n        showAlert(\"Email already exists. Try another.\", \"warning\");\n      } else {\n        createUser.run(\n          () => {\n            getAllUsers.run();\n            closeModal('AddUserModal');\n            showAlert('User created successfully!', 'success');\n          },\n          (err) => {\n            showAlert(\"Error: \" + err.message, \"error\");\n          }\n        );\n      }\n    });\n  }\n})()\n}}\n",
+  "parentColumnSpace": 6.9375,
+  "parentId": "v0s7j7zkes",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 20,
+  "text": "Create User",
+  "topRow": 37,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "9l1vavzqte",
+  "widgetName": "AddUserBtn"
+}

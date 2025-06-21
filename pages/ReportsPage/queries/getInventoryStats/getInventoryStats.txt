@@ -1,0 +1,5 @@
+SELECT 
+  COUNT(*) AS total_items,
+  SUM(quantity) AS total_quantity,
+  COUNT(*) FILTER (WHERE quantity <= low_threshold) AS low_stock_count
+FROM items;
