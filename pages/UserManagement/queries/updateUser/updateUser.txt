@@ -1,0 +1,13 @@
+UPDATE users
+SET 
+  name = '{{ EditNameInput.text.trim() }}',
+  email = '{{ EditEmailInput.text.trim() }}',
+  password_hash = 
+    CASE 
+      WHEN '{{ EditPasswordInput.text.trim() }}' = '' THEN password_hash
+      ELSE '{{ EditPasswordInput.text.trim() }}'
+    END,
+  role_id = (
+    SELECT id FROM roles WHERE name = '{{ EditRoleDropdown.selectedOptionLabel }}'
+  )
+WHERE id = {{ UsersTable.selectedRow.id }};

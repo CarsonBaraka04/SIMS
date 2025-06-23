@@ -1,0 +1,54 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 37,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "tf0hzzo84g",
+  "leftColumn": 43,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{\n  (() => {\n    const name = AddItemName.text.trim();\n    const category = AddItemCategory.text.trim();\n    const qty = AddItemQty.text;\n\n    if (!name || !category || qty === \"\") {\n      showAlert(\"All fields must be filled\", \"warning\");\n      return;\n    }\n\n    // Always auto-generate barcode\n    const barcode = `SIMS-${Math.floor(100000 + Math.random() * 900000)}`;\n    storeValue(\"finalBarcode\", barcode);\n\n    createItem.run(\n      () => {\n        getAllItems.run();\n        closeModal('AddItemModal');\n        showAlert(`Item added! Barcode: ${barcode}`, \"success\");\n      },\n      (err) => showAlert(\"Failed to add item: \" + err.message, \"error\")\n    );\n  })()\n}}\n",
+  "parentId": "hbek278aag",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 59,
+  "text": "Add",
+  "topRow": 33,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "zssrpzk5mq",
+  "widgetName": "AddItemBtn"
+}

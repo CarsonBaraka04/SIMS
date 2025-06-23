@@ -1,0 +1,56 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 16,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "tf0hzzo84g",
+  "leftColumn": 41,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{ \n  deleteItem.run(\n    () => {\n      getAllItems.run();\n      closeModal('ConfirmDeleteModal');\n      showAlert(\"Item deleted\", \"success\");\n    },\n    (err) => showAlert(\"Delete failed: \" + err.message, \"error\")\n  )\n}}",
+  "originalBottomRow": 22,
+  "originalTopRow": 18,
+  "parentId": "pjwp21vo2e",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 57,
+  "text": "Yes",
+  "topRow": 12,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "zvgb8ci0il",
+  "widgetName": "DeleteItemBtn"
+}

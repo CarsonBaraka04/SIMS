@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "685438f5a5632c6893ba4456_c1bd4df1-bf75-4747-a2a7-3aa3843f5593",
+  "gitSyncId": "685438f5a5632c6893ba4456_7894c91a-d6fc-4240-88ce-c2e0ca081a39",
   "id": "UserManagement_createUser",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO users (name, email, password_hash, role_id)\nVALUES (\n  '{{ AddNameInput.text.trim() }}',\n  '{{ AddEmailInput.text.trim() }}',\n  '{{ Hasher.hash(AddPasswordInput.text.trim()) }}',\n  {{ AddRoleDropdown.selectedOptionValue }}\n);\n",
+      "body": "INSERT INTO users (name, email, password_hash, role_id)\nVALUES (\n  '{{ AddNameInput.text.trim() }}',\n  '{{ AddEmailInput.text.trim() }}',\n  '{{ AddPasswordInput.text.trim() }}',\n  {{ AddRoleDropdown.selectedOptionValue }}\n);\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

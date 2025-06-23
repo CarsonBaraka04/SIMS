@@ -7,21 +7,18 @@
       "key": "truncateButtonColor"
     },
     {
-      "key": "fontFamily"
-    },
-    {
       "key": "borderRadius"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
-  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontFamily": "Poppins",
   "fontSize": "1.25rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
-  "key": "7cbx9pkntx",
-  "leftColumn": 5,
+  "key": "9so7ct11vf",
+  "leftColumn": 24,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -30,19 +27,21 @@
   "mobileRightColumn": 41,
   "mobileTopRow": 1,
   "needsErrorInfo": false,
+  "originalBottomRow": 4,
+  "originalTopRow": 0,
   "overflow": "NONE",
-  "parentId": "v0s7j7zkes",
+  "parentId": "u62elyrjdc",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 57,
+  "rightColumn": 40,
   "shouldTruncate": false,
-  "text": "Add User",
-  "textAlign": "CENTER",
+  "text": "NEW USER",
+  "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "gg0pq4ugva",
+  "widgetId": "903zsofxh4",
   "widgetName": "Text1"
 }

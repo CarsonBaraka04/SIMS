@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "685438f5a5632c6893ba4456_6d8fdba3-a42f-4389-9914-6f3a79b0733a",
+  "gitSyncId": "685438f5a5632c6893ba4456_235b6a98-856a-4389-b8e2-54df9e91990e",
   "id": "ItemsDashboard_getAllItems",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM items ORDER BY id DESC;\nSELECT * FROM items\nWHERE name ILIKE '%' || {{ SearchInput.text }} || '%'\nORDER BY id DESC;\nINSERT INTO items (name, description, barcode, quantity, low_threshold)\nVALUES (\n  '{{ ItemNameInput.text.trim() }}',\n  '{{ ItemDescInput.text.trim() }}',\n  '{{ ItemBarcodeInput.text.trim() || \"SIMS-\" + Math.floor(Math.random() * 1000000) }}',\n  {{ parseInt(ItemQtyInput.text || '0', 10) }},\n  {{ parseInt(ItemThresholdInput.text || '0', 10) }}\n);\n",
+      "body": "SELECT id, name, category, qty, barcode FROM items ORDER BY id;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,11 +22,7 @@
       "name": "neon_inventory_db",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
+    "dynamicBindingPathList": [],
     "name": "getAllItems",
     "pageId": "ItemsDashboard",
     "runBehaviour": "ON_PAGE_LOAD",

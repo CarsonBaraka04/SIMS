@@ -1,0 +1,6 @@
+SELECT u.id, u.name, u.email, r.name AS role
+FROM users u
+JOIN roles r ON u.role_id = r.id
+WHERE u.email = '{{ EmailInput.text.trim() }}'
+AND u.password_hash = '{{ Hasher.hash(PasswordInput.text.trim()) }}';
+

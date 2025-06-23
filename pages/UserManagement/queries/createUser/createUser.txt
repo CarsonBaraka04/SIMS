@@ -2,6 +2,6 @@ INSERT INTO users (name, email, password_hash, role_id)
 VALUES (
   '{{ AddNameInput.text.trim() }}',
   '{{ AddEmailInput.text.trim() }}',
-  '{{ Hasher.hash(AddPasswordInput.text.trim()) }}',
+  '{{ AddPasswordInput.text.trim() }}',
   {{ AddRoleDropdown.selectedOptionValue }}
 );

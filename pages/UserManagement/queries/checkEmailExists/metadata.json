@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "685438f5a5632c6893ba4456_20d820c8-58dd-4f84-b4aa-21cd5744cd38",
+  "gitSyncId": "685438f5a5632c6893ba4456_2c51307f-593c-4ffc-84ed-6481ad6c6f1d",
   "id": "UserManagement_checkEmailExists",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT COUNT(*) \nFROM users \nWHERE email = '{{ AddEmailInput.text.trim() }}';\n",
+      "body": "SELECT COUNT(*) FROM users WHERE email = '{{ AddEmailInput.text.trim() }}';\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

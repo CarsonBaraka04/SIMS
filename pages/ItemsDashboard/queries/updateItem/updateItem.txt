@@ -1,7 +1,6 @@
 UPDATE items
 SET 
-  name = '{{ EditNameInput.text.trim() }}',
-  description = '{{ EditDescInput.text.trim() }}',
-  quantity = {{ parseInt(EditQtyInput.text || '0', 10) }},
-  low_threshold = {{ parseInt(EditThresholdInput.text || '0', 10) }}
+  name = '{{ EditItemName.text.trim() }}',
+  category = '{{ EditItemCategory.text.trim() }}',
+  qty = {{ EditItemQty.text }}
 WHERE id = {{ ItemsTable.selectedRow.id }};

@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "685438f5a5632c6893ba4456_32482153-3aaa-4d29-af0e-11560d219a84",
+  "gitSyncId": "685438f5a5632c6893ba4456_cec03ad4-b582-4742-80c0-3df20a7f0eb3",
   "id": "ItemsDashboard_createItem",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO items (name, description, barcode, quantity, low_threshold)\nVALUES (\n  '{{ ItemNameInput.text.trim() }}',\n  '{{ ItemDescInput.text.trim() }}',\n  '{{ ItemBarcodeInput.text.trim() === \"\" ? \"SIMS-\" + Math.floor(Math.random() * 1000000) : ItemBarcodeInput.text.trim() }}',\n  {{ parseInt(ItemQtyInput.text || '0', 10) }},\n  {{ parseInt(ItemThresholdInput.text || '0', 10) }}\n);\n",
+      "body": "INSERT INTO items (name, category, qty, barcode)\nVALUES (\n  '{{ AddItemName.text.trim() }}',\n  '{{ AddItemCategory.text.trim() }}',\n  {{ AddItemQty.text }},\n  '{{ appsmith.store.finalBarcode }}'\n);\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

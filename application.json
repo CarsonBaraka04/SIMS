@@ -32,16 +32,8 @@
   "icon": "book",
   "pages": [
     {
-      "id": "Login",
+      "id": "LoginPage",
       "isDefault": true
-    },
-    {
-      "id": "UserManagement",
-      "isDefault": false
-    },
-    {
-      "id": "ItemsDashboard",
-      "isDefault": false
     },
     {
       "id": "TransactionsPage",
@@ -49,6 +41,14 @@
     },
     {
       "id": "ReportsPage",
+      "isDefault": false
+    },
+    {
+      "id": "UserManagement",
+      "isDefault": false
+    },
+    {
+      "id": "ItemsDashboard",
       "isDefault": false
     }
   ],
