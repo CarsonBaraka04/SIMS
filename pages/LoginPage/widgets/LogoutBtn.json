@@ -1,29 +1,19 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 57,
-  "bottomRowBeforeCollapse": 53,
+  "bottomRow": 31,
   "boxShadow": "none",
-  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonColor": "#ef4444",
   "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
     {
-      "key": "buttonColor"
-    },
-    {
       "key": "borderRadius"
-    },
-    {
-      "key": "isVisible"
     }
   ],
   "dynamicPropertyPathList": [
     {
       "key": "onClick"
-    },
-    {
-      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [
@@ -31,21 +21,21 @@
       "key": "onClick"
     }
   ],
+  "iconAlign": "left",
+  "iconName": "log-out",
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
-  "isVisible": "{{ appsmith.store.currentUser.role === \"Inventory Manager\" \n\nappsmith.store.currentUser\n}}",
-  "key": "tf0hzzo84g",
-  "leftColumn": 54,
+  "isVisible": true,
+  "key": "didq9hp0wm",
+  "leftColumn": 15,
   "minWidth": 120,
-  "mobileBottomRow": 52,
-  "mobileLeftColumn": 48,
-  "mobileRightColumn": 64,
-  "mobileTopRow": 48,
+  "mobileBottomRow": 45,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 15,
+  "mobileTopRow": 41,
   "needsErrorInfo": false,
-  "onClick": "{{ showModal('AddItemModal') }}",
-  "originalBottomRow": 53,
-  "originalTopRow": 48,
+  "onClick": "{{\nstoreValue('currentUser', undefined);\nnavigateTo('LoginPage');\n}}",
   "parentColumnSpace": 10.25,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -54,12 +44,11 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 64,
-  "text": "Add Item",
-  "topRow": 52,
-  "topRowBeforeCollapse": 48,
+  "rightColumn": 30,
+  "text": "Logout",
+  "topRow": 27,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "ram3hhx71l",
-  "widgetName": "OpenAddItemBtn"
+  "widgetId": "1wqp43bd8h",
+  "widgetName": "LogoutBtn"
 }

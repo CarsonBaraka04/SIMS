@@ -44,7 +44,7 @@
   "parentColumnSpace": 6.9375,
   "parentId": "hbek278aag",
   "parentRowSpace": 10,
-  "placeholderText": "SIMS-{{ Math.floor(100000 + Math.random() * 900000) }}\n",
+  "placeholderText": "E.g: SIMS-{{ Math.floor(100000 + Math.random() * 900000) }}\n",
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",

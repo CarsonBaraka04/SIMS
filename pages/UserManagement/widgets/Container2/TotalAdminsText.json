@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 60,
+  "bottomRow": 10,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,20 +11,23 @@
     },
     {
       "key": "text"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicPropertyPathList": [
     {
-      "key": "fontStyle"
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [],
-  "fontFamily": "Nunito Sans",
-  "fontSize": "1.25rem",
-  "fontStyle": "BOLD AND UNDERLINED",
+  "fontFamily": "Roboto",
+  "fontSize": "1rem",
+  "fontStyle": "BOLD",
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "{{ appsmith.store.currentUser.role === \"Admin\" \nappsmith.store.currentUser\n}}",
   "key": "76wi1s9ui8",
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
@@ -35,23 +38,23 @@
   "mobileRightColumn": 18,
   "mobileTopRow": 56,
   "needsErrorInfo": false,
-  "originalBottomRow": 60,
-  "originalTopRow": 56,
+  "originalBottomRow": 74,
+  "originalTopRow": 70,
   "overflow": "NONE",
   "parentColumnSpace": 10.25,
-  "parentId": "0",
+  "parentId": "95abbmthny",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "shouldTruncate": false,
-  "text": "Total Users: {{ getAllUsers.data.length }}",
+  "text": "(i) Admins: {{\n  getAllUsers.data.filter(u => u.role === 'Admin').length\n}}",
   "textAlign": "CENTER",
-  "textColor": "#231F20",
-  "topRow": 56,
+  "textColor": "#1d4ed8",
+  "topRow": 6,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "73o4efw8cl",
-  "widgetName": "TotalUsersText"
+  "widgetId": "rsw9w1z8pq",
+  "widgetName": "TotalAdminsText"
 }

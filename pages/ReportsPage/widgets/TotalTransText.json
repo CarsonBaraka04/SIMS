@@ -1,28 +1,33 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 54,
+  "bottomRow": 57,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
-    },
-    {
-      "key": "fontFamily"
     },
     {
       "key": "borderRadius"
     },
     {
       "key": "text"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
   "dynamicTriggerPathList": [],
-  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontFamily": "Roboto",
   "fontSize": "1rem",
   "fontStyle": "BOLD",
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "{{ appsmith.store.currentUser.role === \"Store Clerk\" || appsmith.store.currentUser.role === \"Admin\" \nappsmith.store.currentUser\n}}",
   "key": "76wi1s9ui8",
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
@@ -33,8 +38,8 @@
   "mobileRightColumn": 18,
   "mobileTopRow": 44,
   "needsErrorInfo": false,
-  "originalBottomRow": 49,
-  "originalTopRow": 44,
+  "originalBottomRow": 58,
+  "originalTopRow": 54,
   "overflow": "NONE",
   "parentColumnSpace": 10.25,
   "parentId": "0",
@@ -46,7 +51,7 @@
   "text": "Total Transactions: {{ getTransactions.data.length }}",
   "textAlign": "CENTER",
   "textColor": "#231F20",
-  "topRow": 50,
+  "topRow": 53,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
