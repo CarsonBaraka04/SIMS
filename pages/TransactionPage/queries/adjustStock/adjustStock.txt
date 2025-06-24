@@ -1,0 +1,7 @@
+UPDATE items
+SET qty = qty +
+  CASE 
+    WHEN {{ TransTypeDropdown.selectedOptionValue }} = 'IN' THEN {{ TransQtyInput.text }}
+    ELSE -1 * {{ TransQtyInput.text }}
+  END
+WHERE id = {{ TransItemDropdown.selectedOptionValue }};

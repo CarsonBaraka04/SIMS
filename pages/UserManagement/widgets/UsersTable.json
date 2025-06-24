@@ -2,10 +2,10 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderColor": "#E0DEDE",
-  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderRadius": "0.375rem",
   "borderWidth": "1",
-  "bottomRow": 42,
-  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "bottomRow": 46,
+  "boxShadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
   "cachedTableData": {},
   "canFreezeColumn": true,
   "childStylesheet": {
@@ -36,11 +36,12 @@
     "name",
     "email",
     "role",
-    "customColumn1",
-    "customColumn2"
+    "customColumn2",
+    "customColumn1"
   ],
-  "columnUpdatedAt": 1750528813928,
+  "columnUpdatedAt": 1750687270838,
   "columnWidthMap": {},
+  "compactMode": "DEFAULT",
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
@@ -52,12 +53,6 @@
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
-    },
-    {
-      "key": "borderRadius"
-    },
-    {
-      "key": "boxShadow"
     },
     {
       "key": "tableData"
@@ -75,16 +70,13 @@
       "key": "primaryColumns.role.computedValue"
     },
     {
-      "key": "primaryColumns.customColumn1.borderRadius"
-    },
-    {
       "key": "primaryColumns.customColumn2.buttonColor"
     },
     {
       "key": "primaryColumns.customColumn2.borderRadius"
     },
     {
-      "key": "primaryColumns.customColumn2.boxShadow"
+      "key": "isVisible"
     }
   ],
   "dynamicPropertyPathList": [
@@ -96,6 +88,9 @@
     },
     {
       "key": "primaryColumns.customColumn2.onClick"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [
@@ -113,7 +108,7 @@
   "inlineEditingSaveOption": "ROW_LEVEL",
   "isLoading": false,
   "isSortable": true,
-  "isVisible": true,
+  "isVisible": "{{ appsmith.store.currentUser.role === \"Admin\" }}",
   "isVisibleDownload": true,
   "isVisibleFilters": false,
   "isVisiblePagination": true,
@@ -127,20 +122,22 @@
   "mobileRightColumn": 50,
   "mobileTopRow": 13,
   "needsErrorInfo": false,
+  "originalBottomRow": 46,
+  "originalTopRow": 10,
   "parentColumnSpace": 10.25,
   "parentId": "0",
   "parentRowSpace": 10,
   "primaryColumns": {
     "customColumn1": {
-      "alias": "delete",
+      "alias": "Delete",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "borderRadius": "{{UsersTable.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "borderRadius": "0.375rem",
       "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
       "buttonColor": "#b91c1c",
       "buttonLabel": "Delete",
       "buttonStyle": "rgb(3, 179, 101)",
-      "buttonVariant": "TERTIARY",
+      "buttonVariant": "SECONDARY",
       "columnType": "button",
       "computedValue": "",
       "currencyCode": "USD",
@@ -159,7 +156,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "delete",
+      "label": "Delete",
       "labelColor": "#FFFFFF",
       "notation": "standard",
       "onClick": "{{ \n  deleteUser.run(\n    () => {\n      getAllUsers.run();\n      showAlert(\"User deleted\", \"success\");\n    },\n    (err) => showAlert(\"Delete failed: \" + err.message, \"error\")\n  )\n}}\n",
@@ -172,15 +169,15 @@
       "width": 150
     },
     "customColumn2": {
-      "alias": "edit",
+      "alias": "Edit",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "borderRadius": "{{UsersTable.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
-      "boxShadow": "{{UsersTable.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
+      "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
       "buttonColor": "{{UsersTable.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
       "buttonLabel": "Edit",
       "buttonStyle": "rgb(3, 179, 101)",
-      "buttonVariant": "TERTIARY",
+      "buttonVariant": "SECONDARY",
       "columnType": "button",
       "computedValue": "",
       "currencyCode": "USD",
@@ -199,7 +196,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "edit",
+      "label": "Edit",
       "labelColor": "#FFFFFF",
       "notation": "standard",
       "onClick": "{{ showModal('EditUserModal') }}",
@@ -232,7 +229,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "email",
+      "label": "Email",
       "notation": "standard",
       "originalId": "email",
       "sticky": "",
@@ -263,7 +260,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "id",
+      "label": "Id",
       "notation": "standard",
       "originalId": "id",
       "sticky": "",
@@ -294,7 +291,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "name",
+      "label": "Name",
       "notation": "standard",
       "originalId": "name",
       "sticky": "",
@@ -325,7 +322,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "role",
+      "label": "Role",
       "notation": "standard",
       "originalId": "role",
       "sticky": "",
@@ -342,7 +339,7 @@
   "searchKey": "",
   "tableData": "{{ getAllUsers.data }}",
   "textSize": "0.875rem",
-  "topRow": 6,
+  "topRow": 10,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,

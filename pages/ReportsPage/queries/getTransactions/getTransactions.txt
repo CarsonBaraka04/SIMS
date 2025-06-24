@@ -1,0 +1,11 @@
+SELECT 
+  t.id,
+  i.name AS item_name,
+  t.type,
+  t.qty,
+  u.name AS user_name,
+  t.created_at
+FROM transactions t
+JOIN items i ON t.item_id = i.id
+JOIN users u ON t.user_id = u.id
+ORDER BY t.created_at DESC;

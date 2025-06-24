@@ -1,12 +1,12 @@
 {
-  "gitSyncId": "685438f5a5632c6893ba4456_12a42d33-117d-407a-b9b9-79f60c50d385",
+  "gitSyncId": "685438f5a5632c6893ba4456_d7578758-ce5d-478c-9ca8-50525e4a0817",
   "unpublishedPage": {
     "isHidden": false,
     "layouts": [
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 800,
+          "bottomRow": 380,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
@@ -26,7 +26,7 @@
         }
       }
     ],
-    "name": "UserManagement",
-    "slug": "usermanagement"
+    "name": "TransactionPage",
+    "slug": "transactionpage"
   }
 }

@@ -1,0 +1,65 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 38,
+  "bottomRowBeforeCollapse": 41,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": "{{ appsmith.store.currentUser.role === \"Finance Officer\" }}",
+  "key": "4hl30z37c6",
+  "leftColumn": 24,
+  "minWidth": 120,
+  "mobileBottomRow": 32,
+  "mobileLeftColumn": 24,
+  "mobileRightColumn": 40,
+  "mobileTopRow": 28,
+  "needsErrorInfo": false,
+  "onClick": "{{\n  (() => {\n    const itemId = TransItemDropdown.selectedOptionValue;\n    const type = TransTypeDropdown.selectedOptionValue;\n    const qty = TransQtyInput.text;\n\n    if (!itemId || !type || qty === \"\" || isNaN(qty) || parseInt(qty) <= 0) {\n      showAlert(\"Fill all fields correctly\", \"warning\");\n      return;\n    }\n\n    insertTransaction.run(\n      () => {\n        adjustStock.run(\n          () => {\n            getAllItems.run();\n            showAlert(\"Transaction successful\", \"success\");\n          },\n          (err) => showAlert(\"Stock update failed: \" + err.message, \"error\")\n        );\n      },\n      (err) => showAlert(\"Transaction failed: \" + err.message, \"error\")\n    );\n  })()\n}}",
+  "originalBottomRow": 43,
+  "originalTopRow": 39,
+  "parentColumnSpace": 10.25,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 39,
+  "text": "Submit",
+  "topRow": 34,
+  "topRowBeforeCollapse": 37,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "iqupeiu13n",
+  "widgetName": "SubmitTransBtn"
+}

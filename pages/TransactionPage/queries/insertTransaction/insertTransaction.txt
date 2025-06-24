@@ -1,0 +1,7 @@
+INSERT INTO transactions (item_id, user_id, type, qty)
+VALUES (
+  {{ TransItemDropdown.selectedOptionValue }},
+  {{ appsmith.store.currentUser.id }},
+  {{ TransTypeDropdown.selectedOptionValue }},
+  {{ TransQtyInput.text }}
+);

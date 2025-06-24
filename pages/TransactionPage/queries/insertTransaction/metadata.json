@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "685438f5a5632c6893ba4456_ca930c6c-9934-431f-8aed-8cc19b37b8c7",
-  "id": "LoginPage_loginUser",
+  "gitSyncId": "685438f5a5632c6893ba4456_32a8ccca-21b2-41c9-ae8f-7e59ae1a53d9",
+  "id": "TransactionPage_insertTransaction",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT u.id, u.name, u.email, r.name AS role\nFROM users u\nJOIN roles r ON u.role_id = r.id\nWHERE u.email = '{{ EmailInput.text.trim() }}'\nAND u.password_hash = '{{ Hasher.hash(PasswordInput.text.trim()) }}';\n",
+      "body": "INSERT INTO transactions (item_id, user_id, type, qty)\nVALUES (\n  {{ TransItemDropdown.selectedOptionValue }},\n  {{ appsmith.store.currentUser.id }},\n  {{ TransTypeDropdown.selectedOptionValue }},\n  {{ TransQtyInput.text }}\n);\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,8 +27,8 @@
         "key": "body"
       }
     ],
-    "name": "loginUser",
-    "pageId": "LoginPage",
+    "name": "insertTransaction",
+    "pageId": "TransactionPage",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }

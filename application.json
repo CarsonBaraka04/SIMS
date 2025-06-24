@@ -5,14 +5,14 @@
   },
   "applicationDetail": {
     "navigationSetting": {
-      "colorStyle": "light",
+      "colorStyle": "theme",
       "logoAssetId": "",
       "logoConfiguration": "logoAndApplicationTitle",
-      "navStyle": "inline",
+      "navStyle": "stacked",
       "orientation": "top",
       "position": "static",
       "showNavbar": true,
-      "showSignIn": true
+      "showSignIn": false
     },
     "themeSetting": {
       "appMaxWidth": "LARGE",
@@ -36,19 +36,19 @@
       "isDefault": true
     },
     {
-      "id": "TransactionsPage",
-      "isDefault": false
-    },
-    {
-      "id": "ReportsPage",
-      "isDefault": false
-    },
-    {
       "id": "UserManagement",
       "isDefault": false
     },
     {
       "id": "ItemsDashboard",
+      "isDefault": false
+    },
+    {
+      "id": "TransactionPage",
+      "isDefault": false
+    },
+    {
+      "id": "ReportsPage",
       "isDefault": false
     }
   ],
@@ -57,14 +57,14 @@
   },
   "unpublishedApplicationDetail": {
     "navigationSetting": {
-      "colorStyle": "light",
+      "colorStyle": "theme",
       "logoAssetId": "",
       "logoConfiguration": "logoAndApplicationTitle",
-      "navStyle": "inline",
+      "navStyle": "stacked",
       "orientation": "top",
       "position": "static",
       "showNavbar": true,
-      "showSignIn": true
+      "showSignIn": false
     },
     "themeSetting": {
       "appMaxWidth": "LARGE",

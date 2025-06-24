@@ -1,6 +1,0 @@
-UPDATE items
-SET quantity = quantity 
-    {{ TransactionType.selectedOptionValue == "IN" ? "+" : "-" }} 
-    {{ TransactionQty.text }}
-WHERE id = {{ TransactionItem.selectedOptionValue }}
-RETURNING *;

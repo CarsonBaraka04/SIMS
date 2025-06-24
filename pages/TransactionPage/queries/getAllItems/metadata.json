@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "685438f5a5632c6893ba4456_ca930c6c-9934-431f-8aed-8cc19b37b8c7",
-  "id": "LoginPage_loginUser",
+  "gitSyncId": "685438f5a5632c6893ba4456_d86c7d43-b5a8-4f02-b296-cdbd7530a200",
+  "id": "TransactionPage_getAllItems",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT u.id, u.name, u.email, r.name AS role\nFROM users u\nJOIN roles r ON u.role_id = r.id\nWHERE u.email = '{{ EmailInput.text.trim() }}'\nAND u.password_hash = '{{ Hasher.hash(PasswordInput.text.trim()) }}';\n",
+      "body": "SELECT id, name, barcode FROM items ORDER BY id;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,14 +22,10 @@
       "name": "neon_inventory_db",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
-    "name": "loginUser",
-    "pageId": "LoginPage",
-    "runBehaviour": "MANUAL",
+    "dynamicBindingPathList": [],
+    "name": "getAllItems",
+    "pageId": "TransactionPage",
+    "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": false
   }
 }

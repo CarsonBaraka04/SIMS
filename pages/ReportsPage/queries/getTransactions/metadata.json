@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "685438f5a5632c6893ba4456_ca930c6c-9934-431f-8aed-8cc19b37b8c7",
-  "id": "LoginPage_loginUser",
+  "gitSyncId": "685438f5a5632c6893ba4456_79fcde1e-06ae-4911-ac50-e89035bc0c32",
+  "id": "ReportsPage_getTransactions",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT u.id, u.name, u.email, r.name AS role\nFROM users u\nJOIN roles r ON u.role_id = r.id\nWHERE u.email = '{{ EmailInput.text.trim() }}'\nAND u.password_hash = '{{ Hasher.hash(PasswordInput.text.trim()) }}';\n",
+      "body": "SELECT \n  t.id,\n  i.name AS item_name,\n  t.type,\n  t.qty,\n  u.name AS user_name,\n  t.created_at\nFROM transactions t\nJOIN items i ON t.item_id = i.id\nJOIN users u ON t.user_id = u.id\nORDER BY t.created_at DESC;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,14 +22,10 @@
       "name": "neon_inventory_db",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
-    "name": "loginUser",
-    "pageId": "LoginPage",
-    "runBehaviour": "MANUAL",
+    "dynamicBindingPathList": [],
+    "name": "getTransactions",
+    "pageId": "ReportsPage",
+    "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": false
   }
 }

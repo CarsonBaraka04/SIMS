@@ -2,6 +2,7 @@
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 53,
+  "bottomRowBeforeCollapse": 53,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonVariant": "PRIMARY",
@@ -12,11 +13,17 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicPropertyPathList": [
     {
       "key": "onClick"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [
@@ -27,9 +34,9 @@
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "{{ appsmith.store.currentUser.role === \"Inventory Manager\" }}",
   "key": "tf0hzzo84g",
-  "leftColumn": 55,
+  "leftColumn": 54,
   "minWidth": 120,
   "mobileBottomRow": 52,
   "mobileLeftColumn": 48,
@@ -37,6 +44,8 @@
   "mobileTopRow": 48,
   "needsErrorInfo": false,
   "onClick": "{{ showModal('AddItemModal') }}",
+  "originalBottomRow": 53,
+  "originalTopRow": 48,
   "parentColumnSpace": 10.25,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -48,6 +57,7 @@
   "rightColumn": 64,
   "text": "Add Item",
   "topRow": 48,
+  "topRowBeforeCollapse": 48,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "ram3hhx71l",
