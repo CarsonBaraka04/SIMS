@@ -18,6 +18,9 @@
     },
     {
       "key": "isVisible"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -27,10 +30,13 @@
     },
     {
       "key": "isVisible"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicTriggerPathList": [],
-  "isDisabled": false,
+  "isDisabled": "{{ appsmith.store.currentUser.role !== \"Finance Officer\" }}",
   "isFilterable": true,
   "isLoading": false,
   "isRequired": false,

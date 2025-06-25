@@ -16,18 +16,24 @@
     },
     {
       "key": "isVisible"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "isVisible"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicTriggerPathList": [],
   "iconAlign": "left",
   "inputType": "NUMBER",
-  "isDisabled": false,
+  "isDisabled": "{{ appsmith.store.currentUser.role !== \"Finance Officer\" }}",
   "isLoading": false,
   "isRequired": false,
   "isVisible": "{{ appsmith.store.currentUser.role === \"Finance Officer\" || appsmith.store.currentUser.role === \"Admin\" \n \nappsmith.store.currentUser\n}}",
