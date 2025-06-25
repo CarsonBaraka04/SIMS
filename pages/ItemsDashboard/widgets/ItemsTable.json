@@ -96,6 +96,12 @@
     },
     {
       "key": "isVisible"
+    },
+    {
+      "key": "primaryColumns.customColumn1.isDisabled"
+    },
+    {
+      "key": "primaryColumns.customColumn2.isDisabled"
     }
   ],
   "dynamicPropertyPathList": [
@@ -110,6 +116,15 @@
     },
     {
       "key": "isVisible"
+    },
+    {
+      "key": "primaryColumns.customColumn1.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.customColumn1.isDisabled"
+    },
+    {
+      "key": "primaryColumns.customColumn2.isDisabled"
     }
   ],
   "dynamicTriggerPathList": [
@@ -236,9 +251,9 @@
       "id": "customColumn1",
       "index": 5,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": "true",
       "isDerived": true,
-      "isDisabled": false,
+      "isDisabled": "{{(() => { const tableData = ItemsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( appsmith.store.currentUser.role !== \"Inventory Manager\" )) :  appsmith.store.currentUser.role !== \"Inventory Manager\"  })()}}",
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
@@ -278,7 +293,7 @@
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": true,
-      "isDisabled": false,
+      "isDisabled": "{{(() => { const tableData = ItemsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( appsmith.store.currentUser.role !== \"Inventory Manager\" )) :  appsmith.store.currentUser.role !== \"Inventory Manager\"  })()}}",
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,

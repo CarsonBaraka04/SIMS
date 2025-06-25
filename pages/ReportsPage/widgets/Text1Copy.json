@@ -27,7 +27,7 @@
   "fontSize": "1.25rem",
   "fontStyle": "BOLD",
   "isLoading": false,
-  "isVisible": "{{ appsmith.store.currentUser.role !== \"Finance Officer\" }}",
+  "isVisible": "{{ appsmith.store.currentUser.role !== \"Store Clerk\" }}",
   "key": "v9c56yxxob",
   "leftColumn": 2,
   "maxDynamicHeight": 9000,

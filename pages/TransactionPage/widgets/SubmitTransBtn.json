@@ -16,6 +16,9 @@
     },
     {
       "key": "isVisible"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicPropertyPathList": [
@@ -24,6 +27,9 @@
     },
     {
       "key": "isVisible"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicTriggerPathList": [
@@ -32,7 +38,7 @@
     }
   ],
   "isDefaultClickDisabled": true,
-  "isDisabled": false,
+  "isDisabled": "{{ appsmith.store.currentUser.role !== \"Finance Officer\" }}\n",
   "isLoading": false,
   "isVisible": "{{ appsmith.store.currentUser.role === \"Finance Officer\" \n\nappsmith.store.currentUser\n}}",
   "key": "4hl30z37c6",
