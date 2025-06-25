@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 14,
+  "bottomRow": 25,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -29,7 +29,7 @@
   "isLoading": false,
   "isVisible": "{{ appsmith.store.currentUser.role !== \"Finance Officer\" }}",
   "key": "v9c56yxxob",
-  "leftColumn": 0,
+  "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -38,8 +38,8 @@
   "mobileRightColumn": 39,
   "mobileTopRow": 2,
   "needsErrorInfo": false,
-  "originalBottomRow": 18,
-  "originalTopRow": 14,
+  "originalBottomRow": 25,
+  "originalTopRow": 21,
   "overflow": "NONE",
   "parentColumnSpace": 3.53125,
   "parentId": "0",
@@ -51,7 +51,7 @@
   "text": "⚠️You do not have access to this page.⚠️",
   "textAlign": "CENTER",
   "textColor": "#ef4444",
-  "topRow": 10,
+  "topRow": 21,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

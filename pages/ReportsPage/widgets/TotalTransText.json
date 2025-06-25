@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 57,
+  "bottomRow": 67,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -29,7 +29,7 @@
   "isLoading": false,
   "isVisible": "{{ appsmith.store.currentUser.role === \"Store Clerk\" || appsmith.store.currentUser.role === \"Admin\" \nappsmith.store.currentUser\n}}",
   "key": "76wi1s9ui8",
-  "leftColumn": 0,
+  "leftColumn": 2,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -38,8 +38,8 @@
   "mobileRightColumn": 18,
   "mobileTopRow": 44,
   "needsErrorInfo": false,
-  "originalBottomRow": 58,
-  "originalTopRow": 54,
+  "originalBottomRow": 67,
+  "originalTopRow": 63,
   "overflow": "NONE",
   "parentColumnSpace": 10.25,
   "parentId": "0",
@@ -51,7 +51,7 @@
   "text": "Total Transactions: {{ getTransactions.data.length }}",
   "textAlign": "CENTER",
   "textColor": "#231F20",
-  "topRow": 53,
+  "topRow": 63,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

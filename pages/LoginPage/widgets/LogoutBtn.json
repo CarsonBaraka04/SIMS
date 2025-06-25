@@ -9,11 +9,17 @@
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicPropertyPathList": [
     {
       "key": "onClick"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [
@@ -26,7 +32,7 @@
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "{{ !!appsmith.store.currentUser }}",
   "key": "didq9hp0wm",
   "leftColumn": 15,
   "minWidth": 120,
@@ -36,6 +42,8 @@
   "mobileTopRow": 41,
   "needsErrorInfo": false,
   "onClick": "{{\nstoreValue('currentUser', undefined);\nnavigateTo('LoginPage');\n}}",
+  "originalBottomRow": 31,
+  "originalTopRow": 27,
   "parentColumnSpace": 10.25,
   "parentId": "0",
   "parentRowSpace": 10,

@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 65,
+  "bottomRow": 75,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -29,7 +29,7 @@
   "isLoading": false,
   "isVisible": "{{ appsmith.store.currentUser.role === \"Store Clerk\" || appsmith.store.currentUser.role === \"Admin\" \nappsmith.store.currentUser\n}}",
   "key": "76wi1s9ui8",
-  "leftColumn": 0,
+  "leftColumn": 2,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -38,8 +38,8 @@
   "mobileRightColumn": 62,
   "mobileTopRow": 44,
   "needsErrorInfo": false,
-  "originalBottomRow": 66,
-  "originalTopRow": 62,
+  "originalBottomRow": 75,
+  "originalTopRow": 71,
   "overflow": "NONE",
   "parentColumnSpace": 10.25,
   "parentId": "0",
@@ -51,7 +51,7 @@
   "text": "Total Checked Out📤: {{\n  getTransactions.data.filter(t => t.type === 'OUT')\n    .reduce((sum, t) => sum + t.qty, 0)\n}}",
   "textAlign": "CENTER",
   "textColor": "#231F20",
-  "topRow": 61,
+  "topRow": 71,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "685438f5a5632c6893ba4456_82ad771a-0890-4030-86e4-975933f07f8b",
+  "id": "ReportsPage_AuthGuard",
+  "unpublishedCollection": {
+    "name": "AuthGuard",
+    "pageId": "ReportsPage",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

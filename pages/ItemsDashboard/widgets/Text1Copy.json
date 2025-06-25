@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 13,
+  "bottomRow": 27,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -29,7 +29,7 @@
   "isLoading": false,
   "isVisible": "{{ appsmith.store.currentUser.role !== \"Inventory Manager\" || appsmith.store.currentUser.role === \"Admin\" }}",
   "key": "v9c56yxxob",
-  "leftColumn": 0,
+  "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -38,8 +38,8 @@
   "mobileRightColumn": 39,
   "mobileTopRow": 2,
   "needsErrorInfo": false,
-  "originalBottomRow": 9,
-  "originalTopRow": 5,
+  "originalBottomRow": 27,
+  "originalTopRow": 23,
   "overflow": "NONE",
   "parentColumnSpace": 3.53125,
   "parentId": "0",
@@ -51,7 +51,7 @@
   "text": "⚠️You do not have access to this page.⚠️",
   "textAlign": "CENTER",
   "textColor": "#ef4444",
-  "topRow": 9,
+  "topRow": 23,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
