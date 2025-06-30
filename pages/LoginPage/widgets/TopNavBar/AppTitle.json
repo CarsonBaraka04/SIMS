@@ -1,54 +1,57 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 16,
+  "bottomRow": 7,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "textColor"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicPropertyPathList": [
     {
-      "key": "fontStyle"
+      "key": "fontFamily"
     }
   ],
   "dynamicTriggerPathList": [],
-  "fontFamily": "Rubik",
+  "fontFamily": "Times New Roman",
   "fontSize": "1.25rem",
-  "fontStyle": "UNDERLINE AND BOLD",
+  "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
-  "key": "4h9puwytah",
+  "key": "doibv315z8",
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 7,
-  "mobileLeftColumn": 27,
-  "mobileRightColumn": 43,
-  "mobileTopRow": 3,
+  "mobileBottomRow": 6,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 8,
+  "mobileTopRow": 2,
   "needsErrorInfo": false,
-  "originalBottomRow": 16,
-  "originalTopRow": 12,
+  "originalBottomRow": 7,
+  "originalTopRow": 1,
   "overflow": "NONE",
-  "parentColumnSpace": 10.25,
-  "parentId": "0",
+  "parentColumnSpace": 9.625,
+  "parentId": "i2vu9336j6",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 63,
+  "rightColumn": 64,
   "shouldTruncate": false,
-  "text": "LOG-IN",
+  "text": "SCHOOL INVENTORY MANAGENT SYSTEM\n[SIMS]",
   "textAlign": "CENTER",
-  "textColor": "#231F20",
-  "topRow": 12,
+  "textColor": "{{appsmith.theme.colors.backgroundColor}}",
+  "topRow": 1,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "qre3bmw2yv",
-  "widgetName": "Text2"
+  "widgetId": "hnqnbyo48d",
+  "widgetName": "AppTitle"
 }
