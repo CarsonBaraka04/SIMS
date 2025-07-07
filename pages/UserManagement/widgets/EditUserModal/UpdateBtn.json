@@ -37,7 +37,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{ \n  updateUser.run(\n    () => {\n      getAllUsers.run();\n      closeModal('EditUserModal');\n      showAlert(\"User updated successfully\", \"success\");\n    },\n    (err) => showAlert(\"Update failed: \" + err.message, \"error\")\n  )\n}}",
+  "onClick": "{{\n  (() => {\n    const name = EditNameInput.text.trim();\n    const email = EditEmailInput.text.trim();\n    const role = EditRoleDropdown.selectedOptionValue;\n\n    if (!name || !email || !role) {\n      showAlert(\"All fields must be filled\", \"warning\");\n      return;\n    }\n\n    updateUser.run(\n      () => {\n        getAllUsers.run();\n        closeModal(\"EditUserModal\");\n        showAlert(\"User updated successfully\", \"success\");\n      },\n      (err) => showAlert(\"Update failed: \" + err.message, \"error\")\n    );\n  })()\n}}",
   "parentId": "wid8opbzkv",
   "placement": "CENTER",
   "recaptchaType": "V3",
