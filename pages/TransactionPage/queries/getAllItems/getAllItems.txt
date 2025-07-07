@@ -1,1 +1,1 @@
-SELECT id, name, barcode FROM items ORDER BY id;
+SELECT id, name, barcode, qty FROM items ORDER BY id;

@@ -55,7 +55,7 @@
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
   "rightColumn": 63,
-  "text": "Submit",
+  "text": "Add User",
   "topRow": 64,
   "topRowBeforeCollapse": 64,
   "type": "BUTTON_WIDGET",
