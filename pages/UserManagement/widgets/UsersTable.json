@@ -160,7 +160,7 @@
       "label": "Delete",
       "labelColor": "#FFFFFF",
       "notation": "standard",
-      "onClick": "{{ \n  deleteUser.run(\n    () => {\n      getAllUsers.run();\n      showAlert(\"User deleted\", \"success\");\n    },\n    (err) => showAlert(\"Delete failed: \" + err.message, \"error\")\n  )\n}}\n",
+      "onClick": "{{ showModal('DeleteUserModal') }}",
       "originalId": "customColumn1",
       "sticky": "",
       "textSize": "0.875rem",
