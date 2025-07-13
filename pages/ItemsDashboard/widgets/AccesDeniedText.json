@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 23,
+  "bottomRow": 21,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -38,8 +38,8 @@
   "mobileRightColumn": 40,
   "mobileTopRow": 2,
   "needsErrorInfo": false,
-  "originalBottomRow": 23,
-  "originalTopRow": 19,
+  "originalBottomRow": 21,
+  "originalTopRow": 17,
   "overflow": "NONE",
   "parentColumnSpace": 10.25,
   "parentId": "0",
@@ -51,7 +51,7 @@
   "text": "❗Access Denied: Please log in to continue.❗",
   "textAlign": "CENTER",
   "textColor": "#ef4444",
-  "topRow": 19,
+  "topRow": 17,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

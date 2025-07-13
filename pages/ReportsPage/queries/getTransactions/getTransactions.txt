@@ -4,6 +4,7 @@ SELECT
   t.type,
   t.qty,
   u.name AS user_name,
+  i.qty AS current_stock,
   t.created_at
 FROM transactions t
 JOIN items i ON t.item_id = i.id

@@ -25,6 +25,7 @@
       "key": "onClick"
     }
   ],
+  "iconAlign": "left",
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,

@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n  t.id,\n  i.name AS item_name,\n  t.type,\n  t.qty,\n  u.name AS user_name,\n  t.created_at\nFROM transactions t\nJOIN items i ON t.item_id = i.id\nJOIN users u ON t.user_id = u.id\nORDER BY t.created_at DESC;\n",
+      "body": "SELECT \n  t.id,\n  i.name AS item_name,\n  t.type,\n  t.qty,\n  u.name AS user_name,\n  i.qty AS current_stock,\n  t.created_at\nFROM transactions t\nJOIN items i ON t.item_id = i.id\nJOIN users u ON t.user_id = u.id\nORDER BY t.created_at DESC;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
