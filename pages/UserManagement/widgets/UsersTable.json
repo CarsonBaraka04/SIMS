@@ -41,7 +41,13 @@
     "customColumn1"
   ],
   "columnUpdatedAt": 1750687270838,
-  "columnWidthMap": {},
+  "columnWidthMap": {
+    "customColumn1": 312.5,
+    "customColumn2": 179,
+    "email": 204,
+    "name": 158,
+    "role": 166
+  },
   "compactMode": "DEFAULT",
   "customIsLoading": false,
   "customIsLoadingValue": "",
