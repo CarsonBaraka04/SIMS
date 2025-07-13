@@ -115,7 +115,7 @@
   "inlineEditingSaveOption": "ROW_LEVEL",
   "isLoading": false,
   "isSortable": true,
-  "isVisible": "{{ appsmith.store.currentUser.role === \"Store Clerk\" || appsmith.store.currentUser.role === \"Admin\" \nappsmith.store.currentUser\n}}",
+  "isVisible": "{{ appsmith.store.currentUser.role === \"Store Clerk\" || appsmith.store.currentUser.role === \"Admin\" || appsmith.store.currentUser.role === \"Inventory Manager\"\nappsmith.store.currentUser\n}}",
   "isVisibleDownload": true,
   "isVisibleFilters": false,
   "isVisiblePagination": true,
